@@ -1,11 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet} from "react-native";
 
-const FavoritesScreen = () =>
+const FavoritesScreen = props =>
 {
   return(
-    <View>
-      <Text>FavoritesScreen Screen</Text>
+    <View style={styles.screen}>
+      <Text style={styles.textWrap}>FavoritesScreen Screen</Text>
     </View>
   );
 };
@@ -15,6 +15,10 @@ const styles = StyleSheet.create({
     flex:1,
     justifyContent:"center",
     alignItems:"center",
+  },
+  textWrap:{
+    fontFamily:"JosefinSans-Regular",
+    fontSize:18,
   },
 });
 

@@ -1,11 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet} from "react-native";
 
-const FiltersScreen = () =>
+const FiltersScreen = props =>
 {
   return(
-    <View>
-      <Text>FiltersScreen Screen</Text>
+    <View style={styles.screen}>
+      <Text style={styles.textWrap}>FiltersScreen Screen</Text>
     </View>
   );
 };
@@ -15,6 +15,10 @@ const styles = StyleSheet.create({
     flex:1,
     justifyContent:"center",
     alignItems:"center",
+  },
+  textWrap:{
+    fontFamily:"JosefinSans-Regular",
+    fontSize:18,
   },
 });
 

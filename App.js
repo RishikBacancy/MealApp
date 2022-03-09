@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   textWrap:{
     fontFamily:"JosefinSans-Regular",
     fontSize:18,
-  }
+  },
 });
 
 export default App;
