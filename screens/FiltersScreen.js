@@ -8,7 +8,7 @@ const FiltersScreen = props =>
       <Text style={styles.textWrap}>FiltersScreen Screen</Text>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   screen:{

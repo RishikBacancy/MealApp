@@ -8,7 +8,7 @@ const FavoritesScreen = props =>
       <Text style={styles.textWrap}>FavoritesScreen Screen</Text>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   screen:{

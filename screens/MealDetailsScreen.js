@@ -8,7 +8,7 @@ const MealDetailsScreen = props =>
       <Text style={styles.textWrap}>MealDetailsScreen Screen</Text>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   screen:{

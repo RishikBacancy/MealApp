@@ -1,14 +1,14 @@
 import React from "react";
 import { View, Text, StyleSheet} from "react-native";
 
-const CategoriesMealsScreen = prps =>
+const CategoriesMealsScreen = props =>
 {
   return(
     <View style={styles.screen}>
       <Text style={styles.textWrap}>CategoriesMealsScreen Screen</Text>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   screen:{
