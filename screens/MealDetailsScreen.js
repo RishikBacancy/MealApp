@@ -3,6 +3,7 @@ import { View, Text, StyleSheet} from "react-native";
 
 const MealDetailsScreen = props =>
 {
+
   return(
     <View style={styles.screen}>
       <Text style={styles.textWrap}>MealDetailsScreen Screen</Text>

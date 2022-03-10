@@ -1,4 +1,5 @@
 import React from "react";
+import { Platform } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import CategoriesScreen from "../screens/CategoriesScreen";
@@ -15,12 +16,13 @@ const MealsNavigator = () =>
             <Stack.Navigator
                 screenOptions={{
                     headerStyle:{
-                        backgroundColor: Colors.primaryColor,
+                        backgroundColor: Platform.OS === "android" ? Colors.primaryColor : "",
                     },
-                    headerTintColor:"#fff",
+                    headerTintColor: Platform.OS === "android" ? "#fff" : Colors.primaryColor,
                     headerTitleStyle:{
                         fontFamily: "JosefinSans-Bold"
-                    }
+                    },
+                    presentation: "modal",
                 }}>
                 <Stack.Screen 
                     name="Categories" 

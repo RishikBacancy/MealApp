@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, FlatList, TouchableOpacity} from "react-native";
+import GridStyle from "../components/GridStyle";
 import { CATEGORIES } from "../data/dummy-data";
 
 const CategoriesScreen = props =>
@@ -8,13 +9,14 @@ const CategoriesScreen = props =>
   const gridItems = (itemData) => 
   {
     return(
-      <TouchableOpacity
-        onPress={()=>{props.navigation.navigate("CategoriesMeal")}}
-        style={styles.gridItem}>
-        <View>
-          <Text>{itemData.item.title}</Text>
-        </View>
-      </TouchableOpacity>
+      <GridStyle
+        title={itemData.item.title}
+        color={itemData.item.color}
+        onSelect={()=>{
+          props.navigation.navigate("CategoriesMeal",
+            itemData.item.id
+          )
+        }}/>
     );
   };
 
@@ -37,11 +39,6 @@ const styles = StyleSheet.create({
   textWrap:{
     fontFamily:"JosefinSans-Regular",
     fontSize:18,
-  },
-  gridItem:{
-    flex:1,
-    margin:15,
-    height:150,
   }, 
 });
 
