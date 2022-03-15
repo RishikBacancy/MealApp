@@ -1,10 +1,22 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { View, Text, StyleSheet, FlatList, TouchableOpacity} from "react-native";
 import GridStyle from "../components/GridStyle";
 import { CATEGORIES } from "../data/dummy-data";
+import HeaderButton from "../components/HeaderButton"
 
 const CategoriesScreen = props =>
 {
+  useEffect(() => {
+    props.navigation.setOptions({
+      headerLeft: () => (
+        <HeaderButton 
+          iconType ="ios-menu"
+          iconColor = {Platform.OS === "android" ? "white" : Colors.primaryColor}
+          selectedBtn = {()=>{props.navigation.toggleDrawer()}}>
+        </HeaderButton>
+      ),
+    });
+  },[])
 
   const gridItems = (itemData) => 
   {

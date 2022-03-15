@@ -1,5 +1,6 @@
 import React from "react";
 import { enableScreens } from "react-native-screens";
+import DrawerNavigation from "./src/navigation/DrawerNavigation";
 import TabNavigator from "./src/navigation/TabNavigator";
 
 enableScreens();
@@ -7,7 +8,7 @@ enableScreens();
 const App = () =>
 {
   return(
-    <TabNavigator/>
+    <DrawerNavigation/>
   );
 };
 
