@@ -16,6 +16,9 @@ const stackHeaderStyles = {
     headerTitleStyle: {
         fontFamily: 'JosefinSans-Bold'
     },
+    headerBackTitleStyle:{
+        fontFamily: 'JosefinSans-Bold'
+    },
     presentation: 'modal'
 }
 

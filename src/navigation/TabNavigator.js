@@ -22,6 +22,9 @@ const TabNavigator = () => {
 							iconName = focused ? 'heart' : 'heart-outline';
 						}
 						return <Icon name={iconName} size={size} color={color} />;
+					},
+					tabBarLabelStyle:{
+						fontFamily: 'JosefinSans-Bold'
 					}
 				})}
 			>
