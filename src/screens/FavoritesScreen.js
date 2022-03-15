@@ -1,7 +1,9 @@
 import React,  {useEffect} from "react";
+import { Platform } from "react-native";
 import MealList from "../components/MealList";
 import { MEALS } from "../data/dummy-data";
 import HeaderButton from "../components/HeaderButton";
+import Colors from "../constants/Colors";
 
 const FavoritesScreen = props =>
 {

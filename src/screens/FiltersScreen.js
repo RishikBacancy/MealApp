@@ -1,6 +1,7 @@
 import React, {useEffect} from "react";
-import { View, Text, StyleSheet} from "react-native";
+import { View, Text, StyleSheet, Platform} from "react-native";
 import HeaderButton from "../components/HeaderButton";
+import Colors from "../constants/Colors";
 
 const FiltersScreen = props =>
 {

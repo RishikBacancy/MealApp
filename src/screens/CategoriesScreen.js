@@ -1,8 +1,9 @@
 import React, {useEffect} from "react";
-import { View, Text, StyleSheet, FlatList, TouchableOpacity} from "react-native";
+import { View, Text, StyleSheet, FlatList, Platform} from "react-native";
 import GridStyle from "../components/GridStyle";
 import { CATEGORIES } from "../data/dummy-data";
-import HeaderButton from "../components/HeaderButton"
+import HeaderButton from "../components/HeaderButton";
+import Colors from "../constants/Colors";
 
 const CategoriesScreen = props =>
 {
