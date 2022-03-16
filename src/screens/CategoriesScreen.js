@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import { View, Text, StyleSheet, FlatList, Platform} from "react-native";
+import { FlatList, Platform} from "react-native";
 import GridStyle from "../components/GridStyle";
 import { CATEGORIES } from "../data/dummy-data";
 import HeaderButton from "../components/HeaderButton";
@@ -41,18 +41,5 @@ const CategoriesScreen = props =>
       numColumns={2}/>
   );
 };
-
-
-const styles = StyleSheet.create({
-  screen:{
-    flex:1,
-    justifyContent:"center",
-    alignItems:"center",
-  },
-  textWrap:{
-    fontFamily:"JosefinSans-Regular",
-    fontSize:18,
-  }, 
-});
 
 export default CategoriesScreen;

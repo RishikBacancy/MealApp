@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback} from 'react';
 import { ScrollView, Image, View, Text, StyleSheet, Platform } from 'react-native';
-import { MEALS } from '../data/dummy-data';
+import { useSelector, useDispatch} from 'react-redux';
 import HeaderButton from '../components/HeaderButton';
 import Colors from '../constants/Colors';
 import DefaultText from '../components/DefaultText';
+import { toggleFav } from '../store/actions/meals';
 
 const ListDetail = props =>
 {
@@ -15,24 +16,35 @@ const ListDetail = props =>
 };
 
 const MealDetailsScreen = props => {
+
 	const mealId = props.route.params;
 
-	const selectedMeal = MEALS.find((meal) => meal.id === mealId);
+  const displayingMeals = useSelector(state => state.meals.meals);
+
+	const selectedMeal = displayingMeals.find(meal => meal.id === mealId);
+
+  const dispatch = useDispatch();
+
+  const toggleFavHandler = useCallback(() => {
+    dispatch( toggleFav(mealId) );
+    console.log("dispatching...");
+  },[dispatch,mealId]);
 
 	useEffect(
 		() => {
+      console.log(toggleFavHandler);
 			props.navigation.setOptions({
 				title: selectedMeal.title,
 				headerRight: () => (
 					<HeaderButton
 						iconType="heart"
 						iconColor={Platform.OS === 'android' ? 'white' : Colors.primaryColor}
-						selectedBtn={() => console.log('btn Pressed!')}
+						selectedBtn={toggleFavHandler}
 					/>
 				)
 			});
 		},
-		[ selectedMeal ]
+		[ selectedMeal, toggleFavHandler]
 	);
 
 	return (
