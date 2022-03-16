@@ -1,9 +1,10 @@
 import React from 'react';
-import { Text, StyleSheet, View, Platform } from 'react-native';
+import { View, Platform } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const HeaderButton = (props) => {
-	return (
+const HeaderButton = props => 
+{
+        return (
 		<View>
 			<Icon 
                                 onPress={props.selectedBtn} 
@@ -14,7 +15,5 @@ const HeaderButton = (props) => {
 		</View>
 	);
 };
-
-const styles = StyleSheet.create({});
 
 export default HeaderButton;
